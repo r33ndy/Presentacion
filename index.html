@@ -14,10 +14,11 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-attachment: fixed;
-            background-image: url('background.jpg');
+            background-image: url('Imagenes/3.png');
             background-size: cover;
-            transition: background-color 0.3s ease;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: #000;
         }
 
         .dark-theme {
@@ -25,15 +26,9 @@
             color: #fff;
         }
 
-        #particles-js {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-
         .card {
-            background-color: #FFFFFF;
+            position: relative;
+            background-color: rgba(255, 255, 255, 0.8);
             border-radius: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             width: 450px;
@@ -48,11 +43,6 @@
                 width: 90%;
                 padding: 20px;
             }
-        }
-
-        .dark-theme .card {
-            background-color: #444;
-            color: #fff;
         }
 
         @keyframes fadeIn {
@@ -73,27 +63,19 @@
             border-radius: 50%;
             margin: 0 auto 20px auto;
             display: block;
-            border: 4px solid #00B0FF;
+            border: 4px solid #70c197;
         }
 
         .card h1 {
-            color: #007BFF;
+            color: #43875f;
             margin-bottom: 10px;
             font-size: 24px;
         }
 
-        .dark-theme .card h1 {
-            color: #00B0FF;
-        }
-
         .card h2 {
-            color: #00B0FF;
+            color: #43875f;
             margin-bottom: 20px;
             font-size: 20px;
-        }
-
-        .dark-theme .card h2 {
-            color: #007BFF;
         }
 
         .social-links {
@@ -108,10 +90,6 @@
             display: inline-block;
             position: relative;
             transition: transform 0.3s ease, color 0.3s ease;
-        }
-
-        .dark-theme .social-links a {
-            color: #00B0FF;
         }
 
         .social-links a:hover {
@@ -143,7 +121,7 @@
         .toggle-button {
             margin-top: 20px;
             padding: 10px 20px;
-            background-color: #007BFF;
+            background-color: #446b4f;
             color: #FFFFFF;
             border: none;
             border-radius: 5px;
@@ -153,11 +131,11 @@
         }
 
         .dark-theme .toggle-button {
-            background-color: #00B0FF;
+            background-color: #446b4f;
         }
 
         .toggle-button:hover {
-            background: linear-gradient(45deg, #007BFF, #00B0FF);
+            background: linear-gradient(45deg, #137a2b, #7bd504);
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
         }
 
@@ -200,7 +178,7 @@
             font-size: 22px;
             font-weight: bold;
             margin-bottom: 10px;
-            color: #007BFF;
+            color: #2e714b;
         }
 
         .modal-body p {
@@ -223,6 +201,59 @@
         .modal-close:hover {
             color: #007BFF;
         }
+
+        /* Estilo para el logo */
+        .logo {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 100px;
+            /* Ajusta el tamaño del logo */
+        }
+
+        /* Estilo para el enlace de URL en móvil */
+        .mobile-url {
+            margin-top: 20px;
+            color: #63ec63;
+            font-size: 18px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .mobile-url:hover {
+            text-decoration: underline;
+            color: #00b300;
+        }
+
+        /* Estilo para el botón de URL en móvil */
+        .mobile-url-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #446b4f;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 16px;
+            text-align: center;
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+
+        .mobile-url-btn:hover {
+            background-color: #1e843b;
+        }
+
+        /* Ajuste de tamaño del botón en dispositivos móviles */
+        @media (max-width: 768px) {
+            .mobile-url-btn {
+                font-size: 18px;
+                padding: 12px 24px;
+            }
+        }
     </style>
 </head>
 
@@ -230,29 +261,37 @@
     <div id="particles-js"></div>
 
     <div class="card" id="business-card">
-        <img src="Imagenes/servicio-al-cliente.png" alt="Foto de Perfil" class="profile-pic">
-        <h1>Atzel Collazo</h1>
-        <h2>CEO PRO180 LLC</h2>
+        <img src="Imagenes/logo-raul-luna.png" alt="Logo" class="logo"> <!-- Agrega la imagen del logo aquí -->
+        <img src="Imagenes/4.png" alt="Foto de Perfil" class="profile-pic">
+        <h1>Raul Luna</h1>
+        <h2>Empresario e Inversionista de Bienes y Raices</h2>
 
         <div class="social-links">
             <a href="mailto:tuemail@example.com" target="_blank" data-title="Correo"><img src="Imagenes/gmail.png"
                     alt="Email" /></a>
-            <a href="https://www.facebook.com/profile.php?id=61553925257835" target="_blank" data-title="Facebook"><img src="Imagenes/facebook.png" alt="Facebook" /></a>
-            <a href="#" target="_blank" data-title="Twitter"><img src="Imagenes/gorjeo.png" alt="Twitter" /></a>
-            <a href="#" target="_blank" data-title="LinkedIn"><img src="Imagenes/linkedin.png" alt="LinkedIn" /></a>
-            <a href="https://youtube.com/@pro180-inversionistas?si=Wf5dW8a-5csPNb5W" target="_blank" data-title="YouTube"><img src="Imagenes/youtube.png" alt="YouTube" /></a>
+            <a href="https://www.facebook.com/raullunapage" target="_blank" data-title="Facebook"><img
+                    src="Imagenes/facebook.png" alt="Facebook" /></a>
+            <a href="https://x.com/RaulLuna180" target="_blank" data-title="Twitter"><img src="Imagenes/gorjeo.png"
+                    alt="Twitter" /></a>
+            <a href="https://www.linkedin.com/in/raulluna180/" target="_blank" data-title="LinkedIn"><img
+                    src="Imagenes/linkedin.png" alt="LinkedIn" /></a>
+            <a href="https://www.youtube.com/c/RaulLunaoficial" target="_blank" data-title="YouTube"><img
+                    src="Imagenes/youtube.png" alt="YouTube" /></a>
         </div>
 
         <button class="toggle-button" onclick="toggleTheme()">Cambiar Tema</button>
         <button class="toggle-button" onclick="showModal()">Mostrar Contacto</button>
+
+        <a href="https://www.raulluna.com/" class="mobile-url-btn" target="_blank">Visita mi sitio web</a>
+        <!-- Botón de URL en móviles -->
     </div>
 
     <div class="modal" id="contact-modal">
         <button class="modal-close" onclick="hideModal()">×</button>
         <div class="modal-header">Información de Contacto</div>
         <div class="modal-body">
-            <p>Teléfono: +123 456 7890</p>
-            <p>Ciudad, País</p>
+            <p>Teléfono: <a href="tel:+1234567890">+123 456 7890</a></p>
+            <p>Florida, Estados Unidos</p>
         </div>
     </div>
 
